@@ -1,0 +1,46 @@
+﻿<div>
+
+    <div ng-if="sudokuResult !== undefined">
+        <label>Answer Mode</label>
+        <table>
+            <tr ng-repeat="row in sudokuResult">
+                <td class="table-bordered sudoku-cell" ng-repeat="col in row"
+                    ng-class="sudokuData[$parent.$index][$index] === col?'fixed-cell':''"
+                    ng-bind="col !== 0?col:''"></td>
+            </tr>
+        </table>
+
+        <br/>
+
+        <div ng-repeat="row in sudokuResult">
+            <span class="sudoku-cell sudoku-board" ng-repeat="col in row"
+                    ng-class="sudokuData[$parent.$index][$index] === col?'fixed-cell':''"
+                    ng-bind="col !== 0?col:''">
+            </span>
+        </div>
+
+    </div>
+
+    <div ng-if="sudokuResult === undefined">
+        <label>Question Mode</label>
+        <table class="table-bordered">
+            <tr ng-repeat="row in sudokuData track by $index">
+                <td class="sudoku-cell fixed-cell"
+                    ng-repeat-start="col in row track by $index"
+                    ng-if="sudokuData[$parent.$index][$index] !== 0"
+                    ng-bind="col !== 0?col:''">
+
+                </td>
+
+
+                <td class="sudoku-cell"
+                    ng-repeat-end
+                    ng-if="sudokuData[$parent.$index][$index] === 0"
+                    ng-bind="col !== 0?col:''">
+
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Sudoku App</title>
+
+    <!--css-->
+    <!--lib-->
+    <link rel="stylesheet" href="../Content/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="../Content/ui-bootstrap-csp.css" type="text/css" />
+    <!--app-->
+    <link rel="stylesheet" href="../Content/app.css" type="text/css" />
+
+
+    <!--javaScript-->
+    <!--lib-->
+    <script src="../Scripts/angular.js"></script>
+    <script src="../Scripts/angular-resource.js"></script>
+    <script src="../Scripts/angular-mocks.js"></script>
+    <script src="../Scripts/angular-route.js"></script>
+    <script src="/Scripts/angular-ui/ui-bootstrap-tpls.js"></script>
+
+    <!--app-->
+    
+    <script src="/App/Models/ReferenceNode.js"></script>
+    <script src="../App/module.js"></script>
+    <script src="../App/Service/SudokuService.js"></script>
+    <script src="/App/Directives/BoardDrawDirective.js"></script>
+    <script src="../App/Sudoku/SudokuController.js"></script>
+    <script src="../App/app.js"></script>
+</head>
+<body ng-app="Sudoku">
+    <h1>Sudoku App</h1>
+
+    <div id="content"></div>
+
+
+    <ng-view></ng-view>
+</body>
+</html>

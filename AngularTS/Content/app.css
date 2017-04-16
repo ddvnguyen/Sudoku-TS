@@ -1,0 +1,37 @@
+﻿body {
+    font-family: 'Segoe UI', sans-serif;
+}
+
+span {
+    font-style: italic;
+}
+
+
+.sudoku-board
+{
+    border:1px solid;
+}
+
+.sudoku-cell
+{
+    height:22px;
+    width:22px;
+    text-align:center;
+    display:inline-block;
+}
+
+.fixed-cell
+{
+    background-color:cornflowerblue
+}
+
+.fill
+{
+    margin:4px 0 0 0;
+    padding:0 0 0 0;
+}
+
+.click-number
+{
+    padding:1px 3px !important;
+}
